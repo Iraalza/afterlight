@@ -1,0 +1,177 @@
+[gd_scene load_steps=14 format=3 uid="uid://cfmv6wc25tmsy"]
+
+[ext_resource type="Texture2D" uid="uid://dr43alnhe28wg" path="res://resourses/fullscreen/main.png" id="1_l84ge"]
+[ext_resource type="Script" uid="uid://drnh2ysbc3vyr" path="res://scripts/cat_scena.gd" id="1_onhaw"]
+[ext_resource type="Texture2D" uid="uid://df4knw81vc0j6" path="res://resourses/fullscreen/mainKamen1.png" id="2_onhaw"]
+[ext_resource type="Texture2D" uid="uid://bf6v87r3b1evn" path="res://resourses/fullscreen/mainKamen2.png" id="3_jr4sa"]
+[ext_resource type="Texture2D" uid="uid://bohu3ij48sdma" path="res://resourses/fullscreen/mainKamen3.png" id="4_ii7h0"]
+[ext_resource type="Texture2D" uid="uid://dwttwlidw1i1a" path="res://resourses/fullscreen/Boom.png" id="5_histf"]
+[ext_resource type="Texture2D" uid="uid://ckmepbhao05mp" path="res://resourses/fullscreen/mainKamen4.png" id="6_7n60b"]
+[ext_resource type="Texture2D" uid="uid://2l28pflgfisr" path="res://resourses/fullscreen/mainKamen5.png" id="7_o6h58"]
+[ext_resource type="Texture2D" uid="uid://cjigy5ap5l5id" path="res://resourses/fullscreen/mainKamen6.png" id="8_1qkwe"]
+[ext_resource type="Texture2D" uid="uid://ct1ku07jk4clg" path="res://resourses/fullscreen/mainKamen7.png" id="9_74qpb"]
+[ext_resource type="Texture2D" uid="uid://cxshu1031spvk" path="res://resourses/Buttons/buttonLong_blue.png" id="10_xrd8g"]
+[ext_resource type="Texture2D" uid="uid://bclv4nybtmtq" path="res://resourses/Buttons/buttonLong_blue_pressed.png" id="11_4vtxc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m84b2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l84ge")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_onhaw")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jr4sa")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ii7h0")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_histf")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_7n60b")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_o6h58")
+}],
+"loop": true,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_1qkwe")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_74qpb")
+}],
+"loop": true,
+"name": &"9",
+"speed": 5.0
+}]
+
+[node name="CatScena" type="Node2D"]
+script = ExtResource("1_onhaw")
+
+[node name="Screen" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_m84b2")
+animation = &"1"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 686.0
+offset_top = 138.0
+offset_right = 1190.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_xrd8g")
+texture_pressed = ExtResource("11_4vtxc")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Взять осколок"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 1965.0
+offset_bottom = 1106.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Мир больше не станет преждним"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Close" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 911.0
+offset_top = 644.0
+offset_right = 1101.0
+offset_bottom = 693.0
+texture_normal = ExtResource("10_xrd8g")
+texture_pressed = ExtResource("11_4vtxc")
+
+[node name="Label" type="Label" parent="Panel/Close"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Продолжить"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_texture_button_button_up"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Panel/Close" to="." method="_on_close_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
