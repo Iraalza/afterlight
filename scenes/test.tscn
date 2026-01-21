@@ -1,0 +1,54 @@
+[gd_scene load_steps=17 format=3 uid="uid://l7hxyfwojv28"]
+
+[ext_resource type="Texture2D" uid="uid://drsdndq7t3yth" path="res://resourses/Game/Buttery/battery0.png" id="1_ff6ho"]
+[ext_resource type="Texture2D" uid="uid://c8qwfttju7f6b" path="res://resourses/Game/Buttery/battery1.png" id="2_7yos8"]
+[ext_resource type="Texture2D" uid="uid://x2kaijrts4f4" path="res://resourses/Game/Buttery/battery10.png" id="3_5jxlq"]
+[ext_resource type="Texture2D" uid="uid://d2tbs8q4q1xbv" path="res://resourses/Game/Buttery/battery11.png" id="4_xrtyr"]
+[ext_resource type="Texture2D" uid="uid://npa5d1q15sfh" path="res://resourses/Game/Buttery/battery12.png" id="5_daiq8"]
+[ext_resource type="Texture2D" uid="uid://dkearbw4cogpi" path="res://resourses/Game/Buttery/battery13.png" id="6_c6rvn"]
+[ext_resource type="Texture2D" uid="uid://qnd7igr0ilhd" path="res://resourses/Game/Buttery/battery14.png" id="7_n74k2"]
+[ext_resource type="Texture2D" uid="uid://cfanrxo46wutp" path="res://resourses/Game/Buttery/battery2.png" id="8_si7kk"]
+[ext_resource type="Texture2D" uid="uid://d2yjv4eac8sjn" path="res://resourses/Game/Buttery/battery3.png" id="9_pn65j"]
+[ext_resource type="Texture2D" uid="uid://dcnh7cepyutur" path="res://resourses/Game/Buttery/battery4.png" id="10_5f8cm"]
+[ext_resource type="Texture2D" uid="uid://bt8w26f32x2h8" path="res://resourses/Game/Buttery/battery5.png" id="11_gm488"]
+[ext_resource type="Texture2D" uid="uid://cxvgo4n03hjjl" path="res://resourses/Game/Buttery/battery6.png" id="12_kay4s"]
+[ext_resource type="Texture2D" uid="uid://bf5ae5awels52" path="res://resourses/Game/Buttery/battery7.png" id="13_j7bvy"]
+[ext_resource type="Texture2D" uid="uid://ck1y11sy4clap" path="res://resourses/Game/Buttery/battery8.png" id="14_1dqgb"]
+[ext_resource type="Texture2D" uid="uid://djn8sbn8ismhy" path="res://resourses/Game/Buttery/battery9.png" id="15_y81of"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_gsk6d"]
+frames = 15
+frame_0/texture = ExtResource("1_ff6ho")
+frame_1/texture = ExtResource("2_7yos8")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("8_si7kk")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("9_pn65j")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("10_5f8cm")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("11_gm488")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("12_kay4s")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("13_j7bvy")
+frame_7/duration = 1.0
+frame_8/texture = ExtResource("14_1dqgb")
+frame_8/duration = 1.0
+frame_9/texture = ExtResource("15_y81of")
+frame_9/duration = 1.0
+frame_10/texture = ExtResource("3_5jxlq")
+frame_10/duration = 1.0
+frame_11/texture = ExtResource("4_xrtyr")
+frame_11/duration = 1.0
+frame_12/texture = ExtResource("5_daiq8")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("6_c6rvn")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("7_n74k2")
+frame_14/duration = 1.0
+
+[node name="test" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = SubResource("AnimatedTexture_gsk6d")

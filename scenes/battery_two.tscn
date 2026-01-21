@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://m00vqdbu5i8k"]
+
+[ext_resource type="Script" uid="uid://dx15fljt2kw0l" path="res://scripts/battery_two.gd" id="1_4dns1"]
+[ext_resource type="Texture2D" uid="uid://c8hr3n6y12bjs" path="res://resourses/Game/OtherButtery/otherbuttery0.png" id="1_23gq2"]
+[ext_resource type="Texture2D" uid="uid://2ktfftxrkle3" path="res://resourses/Game/OtherButtery/otherbuttery0Sellected.png" id="2_4dns1"]
+[ext_resource type="Texture2D" uid="uid://bkfoqhfwpy0rk" path="res://resourses/Game/OtherButtery/otherbuttery1.png" id="3_mtdjp"]
+[ext_resource type="Texture2D" uid="uid://bqryjs2encoiv" path="res://resourses/Game/OtherButtery/otherbuttery1Sellected.png" id="4_nswd8"]
+[ext_resource type="Texture2D" uid="uid://b0s5srmraatho" path="res://resourses/Game/OtherButtery/otherbuttery2.png" id="5_e53y1"]
+[ext_resource type="Texture2D" uid="uid://cne2n73ikvv2l" path="res://resourses/Game/OtherButtery/otherbuttery2Sellected.png" id="6_1t40r"]
+[ext_resource type="Texture2D" uid="uid://b8wy5bmjaliac" path="res://resourses/Game/OtherButtery/otherbuttery3.png" id="7_rb3i3"]
+[ext_resource type="Texture2D" uid="uid://bvubkyigfiaxb" path="res://resourses/Game/OtherButtery/otherbuttery3Sellected.png" id="8_d7q5i"]
+[ext_resource type="Texture2D" uid="uid://edyrra73rbps" path="res://resourses/Game/OtherButtery/otherbuttery4.png" id="9_ycnyi"]
+[ext_resource type="Texture2D" uid="uid://du5heal2hfrd2" path="res://resourses/Game/OtherButtery/otherbuttery4Sellected.png" id="10_ev52d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sayk1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_23gq2")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4dns1")
+}],
+"loop": true,
+"name": &"0s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_mtdjp")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_nswd8")
+}],
+"loop": true,
+"name": &"1s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_e53y1")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1t40r")
+}],
+"loop": true,
+"name": &"2s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_rb3i3")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_d7q5i")
+}],
+"loop": true,
+"name": &"3s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ycnyi")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_ev52d")
+}],
+"loop": true,
+"name": &"4s",
+"speed": 5.0
+}]
+
+[node name="battery_two" type="Button"]
+offset_right = 268.0
+offset_bottom = 144.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_4dns1")
+
+[node name="battery_two_a" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -20)
+sprite_frames = SubResource("SpriteFrames_sayk1")
+animation = &"0"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

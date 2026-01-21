@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4nw0o7475aiw"]
+
+[ext_resource type="Script" uid="uid://dtbkle2ihjao5" path="res://scripts/chainik.gd" id="1_te4j4"]
+[ext_resource type="Texture2D" uid="uid://dd8l71kdp3yet" path="res://resourses/Game/Chainik/chainik.png" id="1_vuk26"]
+[ext_resource type="Texture2D" uid="uid://c1h3xtk70a74l" path="res://resourses/Game/Chainik/chainikSellected.png" id="2_te4j4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_beppv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vuk26")
+}],
+"loop": true,
+"name": &"nos",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_te4j4")
+}],
+"loop": true,
+"name": &"s",
+"speed": 5.0
+}]
+
+[node name="chainik" type="Button"]
+offset_left = -133.0
+offset_top = -120.0
+offset_right = 133.0
+offset_bottom = 121.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_te4j4")
+
+[node name="chainik_a" type="AnimatedSprite2D" parent="."]
+position = Vector2(133, 120)
+sprite_frames = SubResource("SpriteFrames_beppv")
+animation = &"nos"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

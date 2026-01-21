@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cneyokmk84a6n"]
+
+[ext_resource type="Texture2D" uid="uid://ceslycrop425q" path="res://resourses/Game/Rozetka/rozetka.png" id="1_qw6g7"]
+[ext_resource type="Script" uid="uid://b17x5qf2jlrou" path="res://scripts/rozetka.gd" id="1_sqdhf"]
+[ext_resource type="Texture2D" uid="uid://dmqd8y6ytnt6m" path="res://resourses/Game/Rozetka/rozetkaSellected.png" id="2_sqdhf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_puig8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qw6g7")
+}],
+"loop": true,
+"name": &"nos",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_sqdhf")
+}],
+"loop": true,
+"name": &"s",
+"speed": 5.0
+}]
+
+[node name="rozetka" type="Button"]
+offset_left = -141.0
+offset_top = -35.0
+offset_right = 141.0
+offset_bottom = 35.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_sqdhf")
+
+[node name="rozatka_a" type="AnimatedSprite2D" parent="."]
+position = Vector2(141, 35)
+sprite_frames = SubResource("SpriteFrames_puig8")
+animation = &"s"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

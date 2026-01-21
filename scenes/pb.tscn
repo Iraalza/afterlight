@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq3mkmnblhkfb"]
+
+[ext_resource type="Script" uid="uid://bpic54ba6whfi" path="res://scripts/pb.gd" id="1_3xvx5"]
+[ext_resource type="Texture2D" uid="uid://cnhpj61ola7t6" path="res://resourses/Game/pb/pb0.png" id="1_nrytr"]
+[ext_resource type="Texture2D" uid="uid://t8ef6h0eg2qm" path="res://resourses/Game/pb/pb0Sellected.png" id="2_3xvx5"]
+[ext_resource type="Texture2D" uid="uid://6jbxxqrfhaus" path="res://resourses/Game/pb/pb1.png" id="3_a3420"]
+[ext_resource type="Texture2D" uid="uid://kloqlh0bl1g3" path="res://resourses/Game/pb/pb1Sellected.png" id="4_5s0ky"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x2j7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nrytr")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3xvx5")
+}],
+"loop": true,
+"name": &"0s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_a3420")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5s0ky")
+}],
+"loop": true,
+"name": &"1s",
+"speed": 5.0
+}]
+
+[node name="pb" type="Button"]
+offset_right = 79.0
+offset_bottom = 125.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_3xvx5")
+
+[node name="pb_a" type="AnimatedSprite2D" parent="."]
+position = Vector2(108, 40)
+sprite_frames = SubResource("SpriteFrames_x2j7s")
+animation = &"0"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -97,16 +97,15 @@ sprite_frames = SubResource("SpriteFrames_m84b2")
 animation = &"1"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 686.0
-offset_top = 138.0
-offset_right = 1190.0
-offset_bottom = 305.0
+offset_left = 710.0
+offset_top = 460.0
+offset_right = 1210.0
+offset_bottom = 620.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("10_xrd8g")
@@ -120,11 +119,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 45
 text = "Взять осколок"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 offset_left = -16.0
 offset_top = -18.0
 offset_right = 1965.0
@@ -137,24 +138,33 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -513.5
+offset_top = -362.0
+offset_right = 513.5
+offset_bottom = -279.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 60
 text = "Мир больше не станет преждним"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Close" type="TextureButton" parent="Panel"]
-layout_mode = 0
-offset_left = 911.0
-offset_top = 644.0
-offset_right = 1101.0
-offset_bottom = 693.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -247.875
+offset_top = 188.0
+offset_right = 247.875
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("10_xrd8g")
 texture_pressed = ExtResource("11_4vtxc")
+stretch_mode = 0
 
 [node name="Label" type="Label" parent="Panel/Close"]
 layout_mode = 1
@@ -163,6 +173,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 45
 text = "Продолжить"
 horizontal_alignment = 1
 vertical_alignment = 1

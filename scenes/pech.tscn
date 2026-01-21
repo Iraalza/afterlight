@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://df6k7ytlbmbt"]
+
+[ext_resource type="Script" uid="uid://btm4psdh4i3oo" path="res://scripts/pech.gd" id="1_bfs5i"]
+[ext_resource type="Texture2D" uid="uid://4d4rxejki3vu" path="res://resourses/Game/Pech/pechOff.png" id="1_sdm8c"]
+[ext_resource type="Texture2D" uid="uid://d1w6obiagssy1" path="res://resourses/Game/Pech/pechOfSelectedf.png" id="2_bfs5i"]
+[ext_resource type="Texture2D" uid="uid://ml18vp5b5ko5" path="res://resourses/Game/Pech/pechOn.png" id="3_06bim"]
+[ext_resource type="Texture2D" uid="uid://jf5neehl6jw2" path="res://resourses/Game/Pech/pechOnSelected.png" id="4_45wfo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xj7o6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sdm8c")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bfs5i")
+}],
+"loop": true,
+"name": &"offs",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_06bim")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_45wfo")
+}],
+"loop": true,
+"name": &"ons",
+"speed": 5.0
+}]
+
+[node name="pech" type="Button"]
+offset_left = -121.0
+offset_top = -332.0
+offset_right = 122.0
+offset_bottom = 333.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_bfs5i")
+
+[node name="pechA" type="AnimatedSprite2D" parent="."]
+position = Vector2(121, 332)
+sprite_frames = SubResource("SpriteFrames_xj7o6")
+animation = &"ons"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

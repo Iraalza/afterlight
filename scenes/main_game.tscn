@@ -1,7 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b345nlcejuimi"]
+[gd_scene load_steps=15 format=3 uid="uid://b345nlcejuimi"]
 
+[ext_resource type="Script" uid="uid://xbcc6qi0hgu3" path="res://scripts/main_game.gd" id="1_0rdsr"]
 [ext_resource type="Texture2D" uid="uid://dpwfqqixp1u5u" path="res://resourses/Game/gameDay.png" id="1_72e8q"]
 [ext_resource type="Texture2D" uid="uid://dyuwlc8srct4x" path="res://resourses/Game/gameNight.png" id="2_d2op2"]
+[ext_resource type="PackedScene" uid="uid://d07her4brktvx" path="res://scenes/main_battery.tscn" id="3_d2op2"]
+[ext_resource type="PackedScene" uid="uid://df6k7ytlbmbt" path="res://scenes/pech.tscn" id="5_ipu61"]
+[ext_resource type="PackedScene" uid="uid://cneyokmk84a6n" path="res://scenes/rozetka.tscn" id="6_ygxny"]
+[ext_resource type="PackedScene" uid="uid://c4nw0o7475aiw" path="res://scenes/chainik.tscn" id="7_wi4c7"]
+[ext_resource type="PackedScene" uid="uid://1xd36jwli6br" path="res://scenes/poddon.tscn" id="8_70vka"]
+[ext_resource type="PackedScene" uid="uid://b2is734k5nsrp" path="res://scenes/tablichka.tscn" id="9_2l77h"]
+[ext_resource type="PackedScene" uid="uid://m00vqdbu5i8k" path="res://scenes/battery_two.tscn" id="10_nqdth"]
+[ext_resource type="PackedScene" uid="uid://cq3mkmnblhkfb" path="res://scenes/pb.tscn" id="11_5cypo"]
+[ext_resource type="Texture2D" uid="uid://cxshu1031spvk" path="res://resourses/Buttons/buttonLong_blue.png" id="12_wjob3"]
+[ext_resource type="Texture2D" uid="uid://bclv4nybtmtq" path="res://resourses/Buttons/buttonLong_blue_pressed.png" id="13_8xp80"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0rdsr"]
 animations = [{
@@ -23,6 +34,7 @@ animations = [{
 }]
 
 [node name="MainGame" type="Node2D"]
+script = ExtResource("1_0rdsr")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -30,3 +42,118 @@ animations = [{
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_0rdsr")
 animation = &"day"
+
+[node name="main_battery" parent="CanvasLayer" instance=ExtResource("3_d2op2")]
+offset_left = 24.0
+offset_top = 850.0
+offset_right = 212.0
+offset_bottom = 1082.0
+
+[node name="pech" parent="CanvasLayer" instance=ExtResource("5_ipu61")]
+offset_left = -1.0
+offset_top = 129.0
+offset_right = 242.0
+offset_bottom = 794.0
+
+[node name="rozetka" parent="CanvasLayer" instance=ExtResource("6_ygxny")]
+offset_left = 1029.0
+offset_top = 698.0
+offset_right = 1311.0
+offset_bottom = 768.0
+
+[node name="poddon" parent="CanvasLayer" instance=ExtResource("8_70vka")]
+offset_left = 422.0
+offset_top = 715.0
+offset_right = 640.0
+offset_bottom = 805.0
+
+[node name="chainik" parent="CanvasLayer" instance=ExtResource("7_wi4c7")]
+offset_left = 406.0
+offset_top = 538.0
+offset_right = 672.0
+offset_bottom = 779.0
+
+[node name="tablichka" parent="CanvasLayer" instance=ExtResource("9_2l77h")]
+offset_left = 603.0
+offset_top = 168.0
+offset_right = 913.0
+offset_bottom = 369.0
+
+[node name="battery_two" parent="CanvasLayer" instance=ExtResource("10_nqdth")]
+offset_left = 1496.0
+offset_top = 861.0
+offset_right = 1764.0
+offset_bottom = 1005.0
+
+[node name="pb" parent="CanvasLayer" instance=ExtResource("11_5cypo")]
+offset_left = 856.0
+offset_top = 735.0
+offset_right = 935.0
+offset_bottom = 860.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -633.0
+offset_top = -360.0
+offset_right = 633.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -169.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ok_button" type="TextureButton" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -197.5
+offset_top = -150.0
+offset_right = 197.5
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("12_wjob3")
+texture_pressed = ExtResource("13_8xp80")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/ok_button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="yes_button" type="TextureButton" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/yes_button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="no_button" type="TextureButton" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/no_button"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

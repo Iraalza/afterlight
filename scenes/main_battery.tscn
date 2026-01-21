@@ -1,0 +1,293 @@
+[gd_scene load_steps=33 format=3 uid="uid://d07her4brktvx"]
+
+[ext_resource type="Script" uid="uid://b0qyihpipxdxk" path="res://scripts/main_battery.gd" id="1_40npi"]
+[ext_resource type="Texture2D" uid="uid://drsdndq7t3yth" path="res://resourses/Game/Buttery/battery0.png" id="1_0318y"]
+[ext_resource type="Texture2D" uid="uid://c8qwfttju7f6b" path="res://resourses/Game/Buttery/battery1.png" id="2_nfjwc"]
+[ext_resource type="Texture2D" uid="uid://x2kaijrts4f4" path="res://resourses/Game/Buttery/battery10.png" id="3_40npi"]
+[ext_resource type="Texture2D" uid="uid://dee2vpyfs6hi1" path="res://resourses/Game/Buttery/battery0Selected.png" id="3_edkqc"]
+[ext_resource type="Texture2D" uid="uid://d2tbs8q4q1xbv" path="res://resourses/Game/Buttery/battery11.png" id="4_ljap2"]
+[ext_resource type="Texture2D" uid="uid://npa5d1q15sfh" path="res://resourses/Game/Buttery/battery12.png" id="5_an62w"]
+[ext_resource type="Texture2D" uid="uid://cnr3shwlvsml8" path="res://resourses/Game/Buttery/battery10Selected.png" id="6_0u8vv"]
+[ext_resource type="Texture2D" uid="uid://dkearbw4cogpi" path="res://resourses/Game/Buttery/battery13.png" id="6_jkq5d"]
+[ext_resource type="Texture2D" uid="uid://qnd7igr0ilhd" path="res://resourses/Game/Buttery/battery14.png" id="7_7oe8m"]
+[ext_resource type="Texture2D" uid="uid://cfanrxo46wutp" path="res://resourses/Game/Buttery/battery2.png" id="8_7a6x1"]
+[ext_resource type="Texture2D" uid="uid://csf8id76hvy40" path="res://resourses/Game/Buttery/battery11Selected.png" id="8_xkg5v"]
+[ext_resource type="Texture2D" uid="uid://d2yjv4eac8sjn" path="res://resourses/Game/Buttery/battery3.png" id="9_hvyey"]
+[ext_resource type="Texture2D" uid="uid://dqttvh2ellvbw" path="res://resourses/Game/Buttery/battery14Selected.png" id="9_ljap2"]
+[ext_resource type="Texture2D" uid="uid://dcnh7cepyutur" path="res://resourses/Game/Buttery/battery4.png" id="10_3j2dg"]
+[ext_resource type="Texture2D" uid="uid://dkmsw2hciin6t" path="res://resourses/Game/Buttery/battery12Selected.png" id="10_7hxue"]
+[ext_resource type="Texture2D" uid="uid://bt8w26f32x2h8" path="res://resourses/Game/Buttery/battery5.png" id="11_arxl4"]
+[ext_resource type="Texture2D" uid="uid://cunvjr36w2uvx" path="res://resourses/Game/Buttery/battery13Selected.png" id="12_2q8ot"]
+[ext_resource type="Texture2D" uid="uid://cxvgo4n03hjjl" path="res://resourses/Game/Buttery/battery6.png" id="12_m5gxt"]
+[ext_resource type="Texture2D" uid="uid://bf5ae5awels52" path="res://resourses/Game/Buttery/battery7.png" id="13_3jmml"]
+[ext_resource type="Texture2D" uid="uid://ck1y11sy4clap" path="res://resourses/Game/Buttery/battery8.png" id="14_381ko"]
+[ext_resource type="Texture2D" uid="uid://djn8sbn8ismhy" path="res://resourses/Game/Buttery/battery9.png" id="15_5jhu7"]
+[ext_resource type="Texture2D" uid="uid://q1cecq24otqu" path="res://resourses/Game/Buttery/battery1Selected.png" id="15_ik4v7"]
+[ext_resource type="Texture2D" uid="uid://cnsq5nvh8dvis" path="res://resourses/Game/Buttery/battery2Selected.png" id="17_tljou"]
+[ext_resource type="Texture2D" uid="uid://de41jly5q84bq" path="res://resourses/Game/Buttery/battery3Selected.png" id="19_0pk1m"]
+[ext_resource type="Texture2D" uid="uid://84p51o5mm8l1" path="res://resourses/Game/Buttery/battery4Selected.png" id="21_apdjd"]
+[ext_resource type="Texture2D" uid="uid://bpybe7dpi8eoh" path="res://resourses/Game/Buttery/battery5Selected.png" id="23_j7v5a"]
+[ext_resource type="Texture2D" uid="uid://d28f5bs7kpcqb" path="res://resourses/Game/Buttery/battery6Selected.png" id="25_7iqir"]
+[ext_resource type="Texture2D" uid="uid://cvrqbcu1dv34d" path="res://resourses/Game/Buttery/battery7Selected.png" id="27_jw44a"]
+[ext_resource type="Texture2D" uid="uid://djl1828lijrot" path="res://resourses/Game/Buttery/battery8Selected.png" id="29_jag4p"]
+[ext_resource type="Texture2D" uid="uid://igeml6bfyjj5" path="res://resourses/Game/Buttery/battery9Selected.png" id="31_jdwo2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3di6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0318y")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_edkqc")
+}],
+"loop": true,
+"name": &"0s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nfjwc")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_40npi")
+}],
+"loop": true,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_0u8vv")
+}],
+"loop": true,
+"name": &"10s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ljap2")
+}],
+"loop": true,
+"name": &"11",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_xkg5v")
+}],
+"loop": true,
+"name": &"11s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_an62w")
+}],
+"loop": true,
+"name": &"12",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7hxue")
+}],
+"loop": true,
+"name": &"12s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_jkq5d")
+}],
+"loop": true,
+"name": &"13",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_2q8ot")
+}],
+"loop": true,
+"name": &"13s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7oe8m")
+}],
+"loop": true,
+"name": &"14",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ljap2")
+}],
+"loop": true,
+"name": &"14s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ik4v7")
+}],
+"loop": true,
+"name": &"1s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7a6x1")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_tljou")
+}],
+"loop": true,
+"name": &"2s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_hvyey")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_0pk1m")
+}],
+"loop": true,
+"name": &"3s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_3j2dg")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_apdjd")
+}],
+"loop": true,
+"name": &"4s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_arxl4")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_j7v5a")
+}],
+"loop": true,
+"name": &"5s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_m5gxt")
+}],
+"loop": true,
+"name": &"6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_7iqir")
+}],
+"loop": true,
+"name": &"6s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_3jmml")
+}],
+"loop": true,
+"name": &"7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_jw44a")
+}],
+"loop": true,
+"name": &"7s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_381ko")
+}],
+"loop": true,
+"name": &"8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_jag4p")
+}],
+"loop": true,
+"name": &"8s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_5jhu7")
+}],
+"loop": true,
+"name": &"9",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_jdwo2")
+}],
+"loop": true,
+"name": &"9s",
+"speed": 5.0
+}]
+
+[node name="main_battery" type="Button"]
+offset_left = -94.0
+offset_top = -116.0
+offset_right = 94.0
+offset_bottom = 116.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_40npi")
+
+[node name="battery" type="AnimatedSprite2D" parent="."]
+position = Vector2(94, 116)
+sprite_frames = SubResource("SpriteFrames_3di6b")
+animation = &"13s"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

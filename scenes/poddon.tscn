@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://1xd36jwli6br"]
+
+[ext_resource type="Texture2D" uid="uid://c6c07nt2ejky0" path="res://resourses/Game/Poddon/poddon.png" id="1_ih155"]
+[ext_resource type="Script" uid="uid://pqwn0psdclid" path="res://scripts/poddon.gd" id="1_jvvda"]
+[ext_resource type="Texture2D" uid="uid://dw2iar1v270e8" path="res://resourses/Game/Poddon/poddonSellected.png" id="2_jvvda"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptlsf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ih155")
+}],
+"loop": true,
+"name": &"nos",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jvvda")
+}],
+"loop": true,
+"name": &"s",
+"speed": 5.0
+}]
+
+[node name="poddon" type="Button"]
+offset_left = -109.0
+offset_top = -45.0
+offset_right = 109.0
+offset_bottom = 45.0
+focus_mode = 0
+flat = true
+script = ExtResource("1_jvvda")
+
+[node name="poddon_a" type="AnimatedSprite2D" parent="."]
+position = Vector2(109, 45)
+sprite_frames = SubResource("SpriteFrames_ptlsf")
+animation = &"nos"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
